@@ -1,5 +1,4 @@
 require("dotenv").config();
-
 require("@nomiclabs/hardhat-etherscan");
 require("@nomiclabs/hardhat-waffle");
 require("hardhat-gas-reporter");
@@ -25,6 +24,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
 	solidity: "0.8.4",
+	defaultNetwork: "hardhat",
 	networks: {
 		ropsten: {
 			url: process.env.ROPSTEN_URL || "",
